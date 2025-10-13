@@ -7,7 +7,7 @@ dotenv.config()
 
 const app = express()
 connectDb()
-
+app.use(express.json())
 app.use('/api/tasks', taskRouter)
 
 export default app
