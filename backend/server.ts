@@ -1,23 +1,6 @@
-import express from 'express'
+import app from '~/app'
 
-const app = express()
-
-app.listen(5001, () => {
-  console.log('Server started on port 5001')
-})
-
-app.get('/api/tasks', (req, res) => {
-  res.status(200).send('Hello world')
-})
-
-app.get('/api/tasks', (req, res) => {
-  res.status(200).send('Hello world')
-})
-
-app.get('/api/tasks', (req, res) => {
-  res.status(200).send('Hello world')
-})
-
-app.get('/api/tasks', (req, res) => {
-  res.status(200).send('Hello world')
+const PORT = process.env.PORT || 5001
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`)
 })
